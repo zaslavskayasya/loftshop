@@ -1,0 +1,66 @@
+.footer{
+    border-top: 1px solid #D8D8D8;
+}
+
+.footer-inner{
+    padding: 52px 59px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .lang-switch {
+        margin-bottom: 10px;;
+    }
+    .lang-switch .lang-item{
+        padding: 0px 10px 10px 0px;
+        margin-bottom: 10px;
+    }
+}
+
+
+.footer-menu {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 2 колонки */
+    gap: 15px 40px; /* відступи між рядками і між колонками */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-menu-link {
+    text-decoration: none;
+    color: inherit;
+    color: #000;
+    /* Loft FooterLink */
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: color 0.3s ease;
+    &.active, &:hover{
+        color: #FF0524;
+    }
+  }
+
+.footer-information{
+    width: 45%;
+    .copy{
+        color: #797979;
+        /* Loft CopyText */
+        font-family: Montserrat;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-variant: small-caps;
+        margin-top: 0px;
+    }
+    .developers{
+        a{
+            color: #000;
+            transition: color 0.3s ease;            
+            &.active, &:hover{
+                color: #FF0524;
+            }
+        }
+    }
+}

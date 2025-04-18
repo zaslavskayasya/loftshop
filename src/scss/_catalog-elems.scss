@@ -1,0 +1,58 @@
+.flex-line, .limit, .pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;;
+}
+
+.limit{
+    span{
+        color: #141414;
+        font-family: inherit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal; 
+        margin-right: 31px;
+    }
+    a{
+        color: #141414;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 10px;
+        margin: 0px 10px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        &.active, &:hover{
+            color: #FF0524;
+        }
+    }
+}
+
+.pagination{
+    margin-bottom: 30px;
+    .nav-item{
+
+    }
+    .pagination-page{
+        color: #141414;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 10px;
+        margin: 0px 15px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        &.active, &:hover{
+            color: #FF0524;
+        }
+    }
+    .wrap-pag{
+        margin: 0px 60px;
+    }
+}
