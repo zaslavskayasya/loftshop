@@ -369,9 +369,15 @@
     transition: all ease 0.3s;
     transform: translateX(-100%);
   }
+
   .aside.open{
     transform: translateX(0%);
     z-index: 99;
+  }
+  body.left{
+    .aside.open{
+      overflow-y: scroll;
+    }
   }
   .page {
     min-height: 300px;

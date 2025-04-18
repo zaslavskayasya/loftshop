@@ -56,6 +56,7 @@ function openSubmenu(currentSubmenu) {
     if (sub !== currentSubmenu) {
       sub.classList.remove('active');
       aside.style.overflowX = "auto";
+
       aside.style.overflowY = "auto";
     }
   });
@@ -63,6 +64,10 @@ function openSubmenu(currentSubmenu) {
   currentSubmenu.classList.add('active');
   aside.style.overflowX = "initial";
   aside.style.overflowY = "initial";
+  if(window.innerWidth < 1450){
+    console.log('test');
+    aside.style.overflowY = "scroll";
+  }
   overlay.classList.add('active');
   overlay.style.pointerEvents = "inherit"
 
@@ -181,35 +186,6 @@ document.addEventListener('click', function (e) {
 });
 
 
-///////////// SORT //////////
-
-const sortDropdown = document.querySelector('.sort-dropdown');
-const sortToggle = document.getElementById('sortToggle');
-const sortOptions = document.getElementById('sortOptions');
-const selectedOption = document.getElementById('selectedOption');
-
-sortToggle.addEventListener('click', () => {
-  sortDropdown.classList.toggle('open');
-  sortToggle.classList.toggle('open');
-});
-
-sortOptions.addEventListener('click', (e) => {
-  if (e.target.tagName === 'LI') {
-    selectedOption.textContent = e.target.textContent;
-    sortDropdown.classList.remove('open');
-    sortToggle.classList.remove('open');
-    // Можеш тут додати виклик функції сортування:
-    // sortBy(e.target.dataset.value);
-  }
-});
-
-// Закриваємо, якщо клік не по списку
-document.addEventListener('click', (e) => {
-  if (!sortDropdown.contains(e.target)) {
-    sortDropdown.classList.remove('open');
-    sortToggle.classList.remove('open');
-  }
-});
 
 const toggleBtn = document.getElementById("searchToggle");
 const groupSearch = document.querySelector(".group-search");
@@ -220,6 +196,7 @@ toggleBtn.addEventListener("click", () => {
 
 // Щоб закривати поле при кліку поза ним
 document.addEventListener("click", (e) => {
+  
   if (!groupSearch.contains(e.target)) {
     groupSearch.classList.remove("active");
   }
