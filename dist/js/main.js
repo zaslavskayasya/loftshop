@@ -61,7 +61,7 @@ function openSubmenu(currentSubmenu) {
 
   currentSubmenu.classList.add('active');
   aside.style.overflowX = "initial";
-  aside.style.overflowY = "initial";
+  // aside.style.overflowY = "initial";
   overlay.classList.add('active');
   overlay.style.pointerEvents = "inherit"
 
@@ -79,6 +79,8 @@ function closeAllSubmenus() {
   overlay.classList.remove('active');
   overlay.style.pointerEvents = "none"
   hideAllActiveLines();
+  aside.classList.remove('open');
+  body.classList.remove('left');
 }
 
 // 🔹 Handle submenu link click
@@ -204,5 +206,19 @@ document.addEventListener('click', (e) => {
   if (!sortDropdown.contains(e.target)) {
     sortDropdown.classList.remove('open');
     sortToggle.classList.remove('open');
+  }
+});
+
+const toggleBtn = document.getElementById("searchToggle");
+const groupSearch = document.querySelector(".group-search");
+
+toggleBtn.addEventListener("click", () => {
+  groupSearch.classList.toggle("active");
+});
+
+// Щоб закривати поле при кліку поза ним
+document.addEventListener("click", (e) => {
+  if (!groupSearch.contains(e.target)) {
+    groupSearch.classList.remove("active");
   }
 });

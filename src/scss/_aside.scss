@@ -326,19 +326,17 @@
     .text-aside{
       color: #FF0C23;
     }
-    svg {
+    .stroke-color svg {
       path {
         stroke: #FF0C23;
       }
     }
+    .fill-color svg{
+      path{ 
+        fill: red;
+      }
+    }
   }
-  // &:first-child:hover{
-  //   svg{
-  //     path{
-  //       stroke: red
-  //     }
-  //   }
-  // }
 }
 
 .icon-wrap{
@@ -372,6 +370,7 @@
   }
   .aside.open{
     transform: translateX(0%);
+    z-index: 99;
   }
   .page {
     min-height: 300px;

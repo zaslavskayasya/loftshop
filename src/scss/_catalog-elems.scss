@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;;
+    // margin-bottom: 50px;;
 }
 
 .limit{
@@ -33,7 +33,7 @@
 }
 
 .pagination{
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     .nav-item{
 
     }
@@ -55,4 +55,38 @@
     .wrap-pag{
         margin: 0px 60px;
     }
+}
+.flex-line{
+    margin-bottom: 70px;;
+}
+@media screen and (max-width: 678px){
+    .flex-line{
+        flex-direction: column;
+      }
+      .limit{
+        margin-bottom: 15px;
+      }
+      .limit span{
+        font-size: 14px;;
+        margin-right: 10px;
+      }
+      .limit a{
+        padding: 5px;
+        margin: 0px 4px;
+        font-size: 14px;
+      }
+      .pagination .wrap-pag{
+        margin: 0px 20px;
+      }
+      .pagination .pagination-page {
+        padding: 7px;
+        margin: 0px 0px;
+        font-size: 14px;;
+      }
+      .pagination .nav-item{
+        width: 20px;
+        svg{
+            width: 100%;
+        }
+      }
 }
