@@ -7,7 +7,7 @@
   position        : fixed;
   height: 100vh; // Висота рівна висоті вікна
   overflow-y: auto; // Прокрутка по вертикалі
-  overflow-x: hidden;
+  // overflow-x: hidden;
   z-index: 9;
   .small-bold{
     margin-bottom: 21px;
@@ -124,17 +124,17 @@
   position: absolute;
 }
 
-.toggle2.active #bar5 {
+.toggle2.active #bar5 , .toggle2.active #bar51{
   transform          : scaleX(0);
   transition-duration: .5s;
 }
 
-.toggle2.active #bar4 {
+.toggle2.active #bar4, .toggle2.active #bar41 {
   transform          : rotate(45deg);
   transition-duration: .5s;
 }
 
-.toggle2.active #bar6 {
+.toggle2.active #bar6,.toggle2.active #bar61 {
   transform          : rotate(-45deg);
   transition-duration: .5s;
 }
@@ -184,6 +184,7 @@
 
 .submenu-overlay.active {
   opacity: 1;
+  pointer-events: initial;
 }
 
 .submenu-inner {
@@ -420,7 +421,7 @@
       background-color: #fff;
       z-index: 100;
     }
-    #bar5, .bar3 {
+    #bar51, .bar31 {
       transition-duration: .8s;
     }
     
@@ -428,17 +429,17 @@
       position: absolute;
     }
     
-    .toggle2 #bar5 {
+    .toggle2 #bar51 {
       transform          : scaleX(0);
       transition-duration: .5s;
     }
     
-    .toggle2 #bar4 {
+    .toggle2 #bar41 {
       transform          : rotate(45deg);
       transition-duration: .5s;
     }
     
-    .toggle2 #bar6 {
+    .toggle2 #bar61 {
       transform          : rotate(-45deg);
       transition-duration: .5s;
     }

@@ -23,6 +23,7 @@ menuToggle.addEventListener('click', () => {
   toggleIcon.classList.toggle('active', isNavVisible);
   siteNav.classList.toggle('active', isNavVisible);
   catalogMenu.classList.toggle('active', !isNavVisible);
+  
 });
 
 menuToggle2.addEventListener('click', () => {
@@ -30,7 +31,7 @@ menuToggle2.addEventListener('click', () => {
   overlay.classList.toggle('active');
   aside.classList.toggle('open');
   toggleIcon.classList.toggle('active', isNavVisible);
-  body.classList.toggle('left')
+  body.classList.toggle('left');
 });
 
 
@@ -45,6 +46,7 @@ function hideAllActiveLines() {
   document.querySelectorAll('.calalog-menu-link').forEach(link => {
     link.classList.remove('active-line');
   });
+  body.classList.remove('left');
 }
 
 // 🔹 Open specific submenu and update active-line
@@ -55,13 +57,12 @@ function openSubmenu(currentSubmenu) {
       sub.classList.remove('active');
       aside.style.overflowX = "auto";
       aside.style.overflowY = "auto";
-
     }
   });
 
   currentSubmenu.classList.add('active');
   aside.style.overflowX = "initial";
-  // aside.style.overflowY = "initial";
+  aside.style.overflowY = "initial";
   overlay.classList.add('active');
   overlay.style.pointerEvents = "inherit"
 
@@ -70,6 +71,7 @@ function openSubmenu(currentSubmenu) {
   const parentLink = currentSubmenu.closest('.catalog-menu-list')?.querySelector('.calalog-menu-link');
   if (parentLink) {
     showActiveLine(parentLink);
+    body.classList.add('left');
   }
 }
 
