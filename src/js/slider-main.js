@@ -60,13 +60,11 @@ $(document).ready(function () {
   
       // Стрілки
       $wrapper.find('.inner-arrow.up').on('click', function () {
-        console.log('press');
-        $inner.slick('slickPrev');
+          $inner.slick('slickPrev');
       });
   
       $wrapper.find('.inner-arrow.down').on('click', function () {
-        console.log('press2');
-        $inner.slick('slickNext');
+         $inner.slick('slickNext');
       });
   
       enableMouseWheelScroll($inner);
@@ -78,4 +76,110 @@ $(document).ready(function () {
         initInnerSlider($(this)); // Оновлюємо внутрішній слайдер при ресайзі
       });
     });
+
+    $('.pop-slider').slick({
+        arrows: true,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll:2,
+        margin: 10,
+        prevArrow: '<button class="slick-prev custom-arrow"> <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M42.75 27L11.25 27" stroke="#363535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 42.75L11.25 27L27 11.25" stroke="#363535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> </button>',
+        nextArrow: '<button class="slick-next custom-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M11.25 27L42.75 27" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 11.25L42.75 27L27 42.75" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+        customPaging : function(slider, i) {
+          return '<span class="dot"> </span>';
+      },
+    });
+    $('.left-zone').on('click', function () {
+      $('.pop-slider').slick('slickPrev');
+    });
+    
+    $('.right-zone').on('click', function () {
+      $('.pop-slider').slick('slickNext');
+    });
+
+
+    $('.portfolio-slider').slick({
+      arrows: true,
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll:1,   
+      prevArrow: '<button class="slick-prev custom-arrow"> <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M42.75 27L11.25 27" stroke="#363535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 42.75L11.25 27L27 11.25" stroke="#363535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> </button>',
+      nextArrow: '<button class="slick-next custom-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M11.25 27L42.75 27" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 11.25L42.75 27L27 42.75" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+      });
+      $('.left-zone-port').on('click', function () {
+        $('.portfolio-slider').slick('slickPrev');
+      });
+      
+      $('.right-zone-port').on('click', function () {
+        $('.portfolio-slider').slick('slickNext');
+      });
+
+
+      $('.sal-slider').slick({
+        arrows: true,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        margin:15,
+        // centerMode: true,
+        slidesToScroll:1,
+        // margin: 10,
+        prevArrow: '<button class="slick-prev custom-arrow"> <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M42.75 27L11.25 27" stroke="#363535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 42.75L11.25 27L27 11.25" stroke="#363535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> </button>',
+        nextArrow: '<button class="slick-next custom-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M11.25 27L42.75 27" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 11.25L42.75 27L27 42.75" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+        customPaging : function(slider, i) {
+          return '<span class="dot"> </span>';
+      },
+    });
+    $('.left-zone-s').on('click', function () {
+      $('.sal-slider').slick('slickPrev');
+    });
+    
+    $('.right-zone-s').on('click', function () {
+      $('.sal-slider').slick('slickNext');
+    });
+
+
+      $('.col-slider').slick({
+        arrows: true,
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 5,
+        margin: 10,
+        slidesToScroll:1,
+        // margin: 10,
+        prevArrow: '<button class="slick-prev custom-arrow"> <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M42.75 27L11.25 27" stroke="#363535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 42.75L11.25 27L27 11.25" stroke="#363535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> </button>',
+        nextArrow: '<button class="slick-next custom-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M11.25 27L42.75 27" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 11.25L42.75 27L27 42.75" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+        customPaging : function(slider, i) {
+          return '<span class="dot"> </span>';
+      },
+      });
+      $('.left-zone-col').on('click', function () {
+        $('.col-slider').slick('slickPrev');
+      });
+      
+      $('.right-zone-col').on('click', function () {
+        $('.col-slider').slick('slickNext');
+      });
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector(".spoiler-btn");
+  const more = document.querySelector(".spoiler-more");
+
+  btn.addEventListener("click", function () {
+    if (more.style.display === "block") {
+      more.style.display = "none";
+      btn.textContent = "Розгорнути";
+    } else {
+      more.style.display = "block";
+      btn.textContent = "Згорнути";
+    }
   });
+});
