@@ -147,7 +147,7 @@ ul.slick-dots {
 }
 
 .right-zone, .right-zone-s, .right-zone-col, .right-zone-port{
-    right: -150px;
+    right: -180px;
 }
 
 /* Підсвітка при наведенні */
@@ -458,15 +458,27 @@ ul.slick-dots {
 }
 
 .sal-slider{
-    padding-left: 1px;;
+    display: flex;
+    padding-left: 1px;
     margin-left: -30px;
-    .card{
-        max-width: 100%;
+
+    .card {
+        height: 100%;
+    }
+
+    .card-name {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
     }
 }
 
 .sal-item{
     margin: 0px 0px 0px 35px;
+    // display: flex;
+    // height: auto;
+    // width: 100%;
+    // height: 100%;
 }
 
 .collections{
@@ -560,6 +572,7 @@ ul.slick-dots {
 }
 
 
+
 .seo-loft{
     margin-bottom: 160px;    
 }
@@ -649,3 +662,195 @@ ul.slick-dots {
     from { opacity: 0; }
     to   { opacity: 1; }
   }
+
+
+  @media screen and (max-width:1700px ){
+    .col-card {
+        width: 229px;
+        height: 301px;
+    }
+    .seo-loft {
+        margin-bottom: 120px;
+    }
+}
+
+@media screen and (max-width:1650px ){
+    .potrfolio-slide .portfolio-info {
+        background: #535F52;
+        color: #fff;
+        padding: 37px 29px;
+    }
+    .card .card-image-wrap {
+        width: 100%;
+        height: 274px;
+    }
+}
+
+@media screen and (max-width:1650px ){
+    .col-card {
+        width: 211px;
+        height: 264px;
+    }
+     .col-card .col-btn{
+        bottom: 16%;
+    }
+    .sale-block .card {
+        max-width: 100%;
+    }
+    .card {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1250px ){
+    .card .card-image-wrap {
+        width: 100%;
+        height: 213px;
+    }
+    .card-name {
+        flex-grow: 1;
+        min-height: 60px;
+    }
+    .col-card .col-name {
+        color: #FFF;
+        font-family: inherit;
+        font-size: 20px;
+    }
+    .col-card {
+        width: 191px;
+        height: 249px;
+    }
+    .sm-number {
+        color: #FFF;
+        font-family: inherit;
+        font-size: 20px;
+    }
+    .sm-item .sm-overlay .sm-icon {
+        margin-right: 25px;
+        margin-left: 5px;
+    }
+    .potrfolio-slide .portfolio-text {
+        font-size: 22px;
+        line-height: 131%;
+    }
+    .card-name{
+        font-size: 15px;
+    }
+    .rectangle-card {
+        cursor: pointer;
+        width: 23%;
+        height: 193px;
+    }
+    .potrfolio-slide {
+        height: 431px;
+    }
+    .potrfolio-slide .wrap-portfolio-image {
+        min-width: 454px;
+    }
+    .potrfolio-slide .portfolio-text {
+        font-size: 18px;
+    }
+
+}
+
+
+@media screen and (max-width: 980px ){
+    .rectangle-card .rectangle-name{
+        font-size: 15px;
+    }
+    .sm-number {
+        font-size: 17px;
+    }
+    .sm-big-number {
+        font-size: 34px;
+    }
+    .sm-title {
+
+        font-size: 16px;
+    }
+    .sm-icon {
+        width: 65px;
+        svg{
+            width: 100%;;
+        }
+    }
+    .sm-item .sm-overlay .sm-icon {
+        margin-right: 9px;
+    }
+    .rectangle-card .rectangle-name {
+        width: 100%;
+    }
+    .potrfolio-slide {
+        height: auto;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .sal-slider{
+        .card{
+            flex-direction: column;
+        }
+    }
+    .wrap-sm{
+        height: auto;
+    }
+    .sm-1 {
+        width: 100%;
+        max-height: 245px;
+    }
+    .sm-3 {
+        width: 100%;
+        max-height: 245px;
+    }
+    .sm-overlay {
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        flex-direction: row;
+    }
+    .sm-3 .sm-overlay .sm-number{
+        padding-bottom: 0px;
+        margin: 0px;
+    }
+    .sm-3 .sm-overlay .sm-icon {
+        width: 65px;
+        margin: 0px;
+        svg{
+            width: 100%;;
+        }
+    }
+    .name-block-line {
+        align-items: center;
+    }
+    .see-all {
+        font-size: 15px;
+        max-width: 53%;
+    }
+    .wrap-cards-zamovlennya{
+        flex-flow: wrap;
+        .pop-item{
+            width: 45%;
+        }
+    }
+    .seo-loft-wrap{
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 590px){
+    .custom-arrow {
+        position: absolute;
+        top: 50%;
+        width: 47px;
+        svg{
+            width: 100%;
+        }
+    }
+    // .pop-slider .slick-next, .portfolio-slider .slick-next {
+    //     right: -32px;
+    // }
+}

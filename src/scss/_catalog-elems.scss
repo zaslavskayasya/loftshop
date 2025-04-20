@@ -59,6 +59,29 @@
 .flex-line{
     margin-bottom: 70px;;
 }
+
+@media screen and (max-width: 980px){
+  .pagination .pagination-page {
+    font-size: 15px;
+}
+.pagination .wrap-pag {
+    margin: 0px 30px;
+}
+.limit span {
+    font-size: 17px;
+}
+.limit a {
+    font-size: 14px;
+}
+ .pagination .nav-item {
+    max-width: 25px;
+    svg{
+        width: 100%;
+    }
+ }
+
+}
+
 @media screen and (max-width: 678px){
     .flex-line{
         flex-direction: column;

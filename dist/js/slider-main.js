@@ -90,6 +90,26 @@ $(document).ready(function () {
         customPaging : function(slider, i) {
           return '<span class="dot"> </span>';
       },
+      responsive: [
+        {
+          breakpoint: 1124,
+          settings: {
+            slidesToShow: 3
+          }
+        },     
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },    
+        {
+          breakpoint: 590,
+          settings: {
+            slidesToShow: 1
+          }
+        }, 
+      ]
     });
     $('.left-zone').on('click', function () {
       $('.pop-slider').slick('slickPrev');
@@ -126,6 +146,8 @@ $(document).ready(function () {
         speed: 500,
         slidesToShow: 4,
         margin:15,
+        // adaptiveHeight: true,
+        // variableWidth: true,
         // centerMode: true,
         slidesToScroll:1,
         // margin: 10,
@@ -133,7 +155,28 @@ $(document).ready(function () {
         nextArrow: '<button class="slick-next custom-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M11.25 27L42.75 27" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 11.25L42.75 27L27 42.75" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
         customPaging : function(slider, i) {
           return '<span class="dot"> </span>';
+
       },
+      responsive: [
+        {
+          breakpoint: 1124,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 590,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
     });
     $('.left-zone-s').on('click', function () {
       $('.sal-slider').slick('slickPrev');
@@ -158,6 +201,26 @@ $(document).ready(function () {
         customPaging : function(slider, i) {
           return '<span class="dot"> </span>';
       },
+      responsive: [
+        {
+          breakpoint: 1124,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 988,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 780,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+      ]
       });
       $('.left-zone-col').on('click', function () {
         $('.col-slider').slick('slickPrev');
