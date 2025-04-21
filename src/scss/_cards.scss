@@ -180,6 +180,7 @@
     .cards-block{
         margin-bottom: 20px;
     }
+
 }
 
 @media screen and (max-width: 508px){
@@ -209,6 +210,11 @@
     .card-top__info {
 
         font-size: 10px;
+    }
+    .cards-block .card .card-image-wrap {
+        width: 150px;
+        height: 168px;
+        min-width: 150px;
     }
 }
 
