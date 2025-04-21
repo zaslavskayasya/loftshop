@@ -16,6 +16,14 @@ $(document).ready(function () {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      // responsive: [
+      //   {
+      //     breakpoint: 768,
+      //     settings: {
+      //       adaptiveHeight:true,
+      //     }
+      //   },  
+      // ]
     });
   
     function enableMouseWheelScroll($inner) {
@@ -217,7 +225,7 @@ $(document).ready(function () {
         {
           breakpoint: 780,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 1
           }
         }
       ]

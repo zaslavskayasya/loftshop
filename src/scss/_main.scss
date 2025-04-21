@@ -823,6 +823,8 @@ ul.slick-dots {
     }
     .name-block-line {
         align-items: center;
+        margin-bottom: 30px;
+        flex-direction: column;
     }
     .see-all {
         font-size: 15px;
@@ -838,6 +840,25 @@ ul.slick-dots {
         flex-direction: column;
         max-width: 100%;
     }
+    ul.slick-dots {
+        list-style: none;
+        position: absolute;
+        top: auto;
+        left: 50%;
+        bottom: -54px;
+        transform: translateX(-50%);
+    }
+    .potrfolio-slide .portfolio-info {
+        padding: 18px 25px;
+    }
+    .potrfolio-slide .portfoplio-name {
+        font-size: 23px;
+        letter-spacing: 3.68px;
+    }
+    .potrfolio-slide .portfoplio-button{
+        margin: 0px auto 30px 0px;
+    }
+
 }
 
 
