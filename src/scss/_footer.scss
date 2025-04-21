@@ -99,11 +99,18 @@
                 padding: 0px;
             }
     }
+    .footer .lang-switch{
+        margin-left: 0px;
+    }
+    .footer .lang-switch .lang-item{
+        margin-right: 5px;
+    }
 }
 
 @media screen and (max-width: 670px){
     .footer-inner{
         max-width: 100%;
+        padding: 30px 20px 60px 20px;
     }
     .footer-menu {
         display: inline;
@@ -111,4 +118,5 @@
     .footer-menu_item{
         margin-bottom: 10px;;
     }
+
 }

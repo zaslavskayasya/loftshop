@@ -858,6 +858,30 @@ ul.slick-dots {
     .potrfolio-slide .portfoplio-button{
         margin: 0px auto 30px 0px;
     }
+    .zamovlennya {
+        margin-bottom: 50px;
+    }
+    .seo-loft {
+        margin-bottom: 80px;
+    }
+    .potrfolio-slide .portfolio-text{
+        margin-bottom: 43px;
+    }
+    .collections ul.slick-dots {
+        bottom: -66px;
+    }
+
+    .sale-block .card {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .sale-block ul.slick-dots { 
+        bottom: -68px;
+    }
+    .info-media {
+        margin-bottom: 65px;
+    }
+
 
 }
 
@@ -871,7 +895,29 @@ ul.slick-dots {
             width: 100%;
         }
     }
-    // .pop-slider .slick-next, .portfolio-slider .slick-next {
-    //     right: -32px;
-    // }
+    .sm-1,  .sm-3  {
+        width: 100%;
+        max-height: 148px;
+    }
+    .see-all {
+        font-size: 15px;
+        max-width: 100%;
+        text-align: center;
+    }
+    .col-card {
+        width: 79%;
+        height: 375px;
+        margin: 0 auto;
+    }
+    .wrap-cards-zamovlennya .pop-item {
+        width: 43%;
+    }
+    .rectangle-card {
+        height: 164px;
+        
+    }
+    .popular-banner .rectangle-card {
+        height: 242px;
+    }
+
 }
