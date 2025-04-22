@@ -1,8 +1,401 @@
-.wrap-item-page{
+.wrap-item-page {
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-    .pics-part{
-        width: 60%;
+    gap: 20px; /* або скільки хочеш */
+    align-items: flex-start;
+    // height: 2000px;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.wrap-item-image{
+    width: 100%;
+    max-height: auto;
+    margin-bottom: 30px;
+    
+    img{
+        width: 100%;
+        object-fit: cover;
     }
 }
+
+
+.pics-part {
+    // flex: 0 0 60%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    position: sticky;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-right: 50px;
+
+}
+
+.inform-part {
+    width: 500px;
+    height: 100%;
+    flex-shrink: 0;
+    position: sticky;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    // background-color: green;
+    position: relative; /* важливо, щоб sticky елемент мав нормальний контекст */
+}
+
+.wrap-item-info {
+    will-change: transform;
+    // height: 100vh;
+    overflow-x: auto;
+    transition: transform 0.2s ease-out;
+    top: 20px; /* можеш підлаштувати під дизайн */
+}
+
+.wrap-item-info {
+    width: 100%;
+    overflow: auto; /* даємо можливість скролу */
+    scrollbar-width: thin; /* для Firefox — робимо скрол дуже тонким */
+    scrollbar-color: transparent transparent; /* робимо скрол невидимим в Firefox */
+  }
+  .inform-part::-webkit-scrollbar,
+  .pics-part::-webkit-scrollbar {
+    width: 8px; /* ширина скролу для браузерів на базі Webkit */
+  }
+  .inform-part::-webkit-scrollbar-thumb,
+  .pics-part::-webkit-scrollbar-thumb {
+    background: transparent; /* робимо сам повзунок скролу невидимим */
+  }
+  .inform-part::-webkit-scrollbar-track ,
+  .pics-part::-webkit-scrollbar-track {
+    background: transparent; /* фон для треку скролу */
+  }
+
+
+.heade-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.articul, .it-is{
+    color: #636363;
+    font-family: inherit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    span{
+        color: #000;
+        margin-left: 5px;
+    }
+}
+
+.voices{
+    color: #636363;
+    font-family: inherit;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.product-texts{
+    .h1{
+        margin-bottom: 30px;
+    }
+    .product-prices{
+        margin-bottom: 50px ;
+        p{
+            margin: 0px;
+            &.old{
+                color: #A6A6A6;             
+                font-family: inherit;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 144%; /* 28.8px */
+                text-decoration-line: line-through;
+            }
+            &.new{
+                color: #E31727;     
+                font-family: inherit;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 144%; /* 69.12px */
+            }
+        }
+    }
+}
+
+
+.button-container{
+    .button-link{
+        display: flex;
+        text-decoration: none;;
+        background-color: transparent;
+        border-radius: 1px;
+        font-family: inherit;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        padding: 17px 0px 17px 35px;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        max-width: 365px;;
+        svg{
+            max-width: 28px;
+            max-height: 28px;     
+            margin-right: 10px;
+            path{
+                transition: all ease 0.3;
+            }
+        }
+        &:hover, &:active{
+            background-color: #fff;
+    
+        }
+        
+        &.red{
+            border: 1px solid #E31727;
+            color: #E31727;
+            svg{
+                path{
+                    transition: #E31727;
+                }
+            }
+   
+        }
+        &.green{
+            border: 1px solid #387D17;
+            color: #387D17;
+            svg{
+                path{
+                    transition: #387D17;
+                }
+            }           
+        }
+        &.blue{
+            border: 1px solid #27A0D8;
+            color: #27A0D8;
+            svg{
+                path{
+                    transition: #27A0D8;
+                }
+            }           
+        }
+    }
+}
+
+.product-info{
+    p{
+        color: #101010;
+        font-family: inherit;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 184%; /* 33.12px */
+    }
+}
+.accordeon-section{
+    margin-bottom: 50px;
+    border-bottom: 1px solid #D4D4D4 ;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    cursor: pointer;
+    padding: 18px 0px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    color: #000;
+    font-family: inherit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #D4D4D4 ;
+    align-items: center;
+    &:hover{
+        color: #3f3f3f;
+    }
+    &.active{
+        .arr-accordeon{
+            transform: rotate(90deg);
+        }
+
+    }
+  }
+  .arr-accordeon{
+    width: 10px;
+    height: 10px;
+    transition: all ease 0.3s;
+  }
+  
+  .active, .accordion:hover {
+    // background-color: #ccc;
+  }
+  
+  .panel {
+    // padding: 0 18px;
+    // background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    p{
+        font-size: 15px;
+        font-family: inherit;
+    }
+  }
+
+
+  .panel-list{
+    padding-left: 0px;
+    li{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 10px 0px;
+
+        span{
+            color: #1F1F1F;
+            font-family: inherit;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            max-width: 49%;
+            &.name{
+                color: #999999;
+            }
+            &.info{
+                color: #1F1F1F;
+                text-align: right;
+            }
+            
+        }
+    }
+  }
+
+
+  @media screen and (max-width: 1400px){
+    .product-texts h1{
+        font-size: 29px;
+    }
+    .product-texts .product-prices p.new {
+        font-size: 35px;
+    }
+    .product-info p{
+        font-size: 16px;
+    }
+    .accordion{
+        font-style: 17px;
+    }
+    .wrap-item-image{
+        margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1400px){
+    .wrap-item-page{
+        flex-direction: column;
+    }
+  }
+  .pics-part .wrap-item-image {
+    padding: 10px;
+  }
+  .pics-part .item-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+
+  @media screen and (max-width: 768px){
+    .pics-part{
+        // max-width: 760px;
+        max-height: auto;
+        max-height: 100%;
+        width: 100%;
+        display: block;
+        overflow: auto;
+        padding-bottom: 30px;
+        .wrap-item-image{
+            width: 100%;
+            // max-width: 760px;
+        }
+    }
+    .inform-part{
+        width: 100%;
+    }
+   .wrap-item-page  ul.slick-dots{
+        bottom: -10px
+    }
+    .wrap-item-info{
+        overflow: initial;
+    }
+    .inform-part{
+        min-height: 100%;
+        overflow: initial;
+        max-height: initial;
+    }
+    .product-texts h1 {
+        font-size: 23px;
+    }
+    .product-texts .product-prices p.new {
+        font-size: 27px;
+    }
+    .product-texts .product-prices {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: baseline;
+    }
+    .product-texts .product-prices p.old{
+        margin-right: 10px;;
+    }
+    .accordion{
+        font-size: 17px;
+        padding: 15px 0px;
+    }
+    .wrap-item-page{
+        margin-bottom: 50px;
+    }
+    .button-container{
+        margin-bottom: 30px;
+    }
+    .button-container .button-link{
+        max-width: 300px;
+    }
+    .panel-list{
+        padding-top: 0px;
+    }
+    .block-name{
+        text-align: center;
+    }
+  }
+
+
+  @media screen and (max-width: 478px){
+    .button-container .button-link{
+        font-size: 17px;
+        margin: 10px auto;
+        align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 350px){
+    .button-container .button-link{
+        font-size: 17px;
+        margin: 10px auto;
+        align-items: center;
+    }
+  }

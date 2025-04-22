@@ -32,6 +32,7 @@ menuToggle2.addEventListener('click', () => {
   aside.classList.toggle('open');
   toggleIcon.classList.toggle('active', isNavVisible);
   body.classList.toggle('left');
+  document.querySelector('html').classList.toggle('left');
 });
 
 
@@ -47,6 +48,7 @@ function hideAllActiveLines() {
     link.classList.remove('active-line');
   });
   body.classList.remove('left');
+  document.querySelector('html').classList.remove('left');
 }
 
 // 🔹 Open specific submenu and update active-line
@@ -55,8 +57,8 @@ function openSubmenu(currentSubmenu) {
   allSubmenus.forEach(sub => {
     if (sub !== currentSubmenu) {
       sub.classList.remove('active');
+      
       aside.style.overflowX = "auto";
-
       aside.style.overflowY = "auto";
     }
   });
@@ -77,6 +79,7 @@ function openSubmenu(currentSubmenu) {
   if (parentLink) {
     showActiveLine(parentLink);
     body.classList.add('left');
+    document.querySelector('html').classList.add('left');
   }
 }
 
@@ -88,6 +91,7 @@ function closeAllSubmenus() {
   hideAllActiveLines();
   aside.classList.remove('open');
   body.classList.remove('left');
+  document.querySelector('html').classList.remove('left');
 }
 
 // 🔹 Handle submenu link click
