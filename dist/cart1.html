@@ -287,91 +287,122 @@
         </ol>
         </nav>
         <div class="page-name page-name-two">
-            <h1 class="h1"> Кошик</h1>
+            <h1 class="h1"> Ваш Кошик</h1>
         </div>
-
-        <div class="wrap-cart">
+        <form class="woocommerce-cart-form" action="/cart" method="post">
+          <div class="wrap-cart">
             <div class="left-cart">
-                <div class="cart">
-                    <div class="cart__header">
-                      <div>Продукт</div>
-                      <div>Ціна</div>
-                      <div>Кількість</div>
-                      <div>Загалом</div>
-                    </div>
-                  
-                    <!-- Товар -->
-                    <div class="cart__item">
-                      <div class="cart__product">
-                        <img src="https://via.placeholder.com/60x80" alt="Підвіс Estelle Amber/Gold D12" />
+              <table class="shop_table shop_table_responsive cart cart__table">
+                <thead class="cart__header">
+                  <tr>
+                    <th class="product-name">Продукт</th>
+                    <th class="product-price">Ціна</th>
+                    <th class="product-quantity">Кількість</th>
+                    <th class="product-subtotal">Загалом</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Товар 1 -->
+                  <tr class="cart__item cart_item">
+                    <td class="cart__product product-name" data-title="Продукт">
+                      <div class="cart__product-wrapper">
+                        <img src="images/pics/1.webp" alt="Підвіс Estelle Amber/Gold D12" />
                         <div class="cart__info">
                           <p class="cart__title">Підвіс Estelle Amber/Gold D12</p>
-                          <button class="cart__remove">Вилучити</button>
+                          <a href="#" class="cart__remove remove" aria-label="Вилучити товар">Вилучити</a>
                         </div>
                       </div>
-                      <div class="cart__price">1075 ₴</div>
-                      <div class="cart__quantity">
-                        <button class="minus">-</button>
-                        <input class="quant_input" type="number" value="" >
-                        <button class="plus">+</button>
+                    </td>
+                    <td class="cart__price product-price" data-title="Ціна">
+                      <span class="price-small">Ціна: </span>
+                      1125 ₴
+                    </td>
+                    <td class="cart__quantity product-quantity" data-title="Кількість">
+                      <div class="quantity cart__quantity-wrapper">
+                        <button class="minus" type="button">-</button>
+                        <input type="text" class="quant_input" name="cart[abc123][qty]" value="2" min="1" />
+                        <button class="plus" type="button">+</button>
                       </div>
-                      <div class="cart__total">2135 ₴</div>
-                    </div>
-                  
-                    <!-- Ще один товар -->
-                    <div class="cart__item">
-                      <div class="cart__product">
-                        <img src="https://via.placeholder.com/60x80" alt="Підвіс Loft Glass Smoky" />
+                      
+                    </td>
+                    <!-- <span class="price-small">Загалом: </span> -->
+                    <td class="cart__total product-subtotal" data-text="Загалом:" data-title="Загалом">
+                       0 ₴                                  
+
+                    </td>
+                  </tr>
+        
+                  <!-- Товар 2 -->
+                  <tr class="cart__item cart_item">
+                    <td class="cart__product product-name" data-title="Продукт">
+                      <div class="cart__product-wrapper">
+                        <img src="images/pics/8.webp" alt="Підвіс Loft Glass Smoky" />
                         <div class="cart__info">
                           <p class="cart__title">Підвіс Loft Glass Smoky Grey D27/H20</p>
-                          <button class="cart__remove">Вилучити</button>
+                          <a href="#" class="cart__remove remove" aria-label="Вилучити товар">Вилучити</a>
                         </div>
                       </div>
-                      <div class="cart__price">9856 ₴</div>
-                      <div class="cart__quantity">
-                        <button class="minus">-</button>
-                        <input class="quant_input" type="text" value="" >
-                        <button class="plus">+</button>
+                    </td>
+                    <td class="cart__price product-price" data-title="Ціна">
+                      <span class="price-small">Ціна: </span> 
+                      30 ₴</td>
+                    <td class="cart__quantity product-quantity" data-title="Кількість">
+                      <div class="quantity cart__quantity-wrapper">
+                        <button class="minus" type="button">-</button>
+                        <input type="text" class="quant_input" name="cart[xyz789][qty]" value="1" min="1" />
+                        <button class="plus" type="button">+</button>
                       </div>
-                      <div class="cart__total">9856 ₴</div>
-                    </div>
-                  </div>
+                    </td>
+                    <td class="cart__total product-subtotal" data-text="Загалом:" data-title="Загалом">0 ₴</td>
+                  </tr>
+                </tbody>
+              </table>
+        
+              <!-- <div class="cart__actions">
+                <button type="submit" name="update_cart" class="btn btn--secondary">Оновити кошик</button>
+              </div> -->
             </div>
+        
             <div class="right-cart">
-                <aside class="cart-summary">
-                    <h2 class="cart-summary__title">Підсумки кошика</h2>
-                  
-                    <div class="cart-summary__section">
-                      <div class="cart-summary__row">
-                        <span>Проміжний підсумок</span>
-                        <strong>12356 ₴</strong>
-                      </div>
-                    </div>
-                  
-                    <div class="cart-summary__section">
-                      <div class="cart-summary__label">Доставка</div>
-                      <ul class="cart-summary__delivery">
-                        <li>Нова пошта</li>
-                        <li>Укрпошта</li>
-                        <li>Mist</li>
-                      </ul>
-                      <p class="cart-summary__note">Варіанти доставки будуть оновлені під час оформлення замовлення.</p>
-                    </div>
-                  
-                    <div class="cart-summary__section">
-                      <div class="cart-summary__row cart-summary__row--total">
-                        <span>ЗАГАЛОМ</span>
-                        <strong>12356 ₴</strong>
-                      </div>
-                    </div>
-                  
-                    <div class="cart-summary__actions">
-                      <button class="btn btn--primary">ОФОРМИТИ ЗАМОВЛЕННЯ</button>
-                      <button class="btn btn--secondary">ПРОДОВЖИТИ ПОКУПКИ</button>
-                    </div>
-                </aside>
+              <aside class="cart-summary">
+                <h2 class="cart-summary__title">Підсумки кошика</h2>
+        
+                <div class="cart-summary__section">
+                  <div class="cart-summary__row">
+                    <span>Проміжний підсумок</span>
+                    <strong>12356 ₴</strong>
+                  </div>
+                </div>
+        
+                <div class="cart-summary__section">
+                  <div class="sammary-delivery">
+
+                    <div class="cart-summary__label">Доставка</div>
+                    <ul class="cart-summary__delivery">
+                      <li>Нова пошта</li>
+                      <li>Укрпошта</li>
+                      <li>Mist</li>
+                    </ul>
+                  </div>
+                  <p class="cart-summary__note">Варіанти доставки будуть оновлені під час оформлення замовлення.</p>
+                </div>
+        
+                <div class="cart-summary__section">
+                  <div class="cart-summary__row cart-summary__row--total">
+                    <span>ЗАГАЛОМ</span>
+                    <strong>12356 ₴</strong>
+                  </div>
+                </div>
+        
+                <div class="cart-summary__actions">
+                  <a href="/checkout" class="btn btn--primary">ОФОРМИТИ ЗАМОВЛЕННЯ</a>
+                  <a href="/shop" class="btn btn--secondary">ПРОДОВЖИТИ ПОКУПКИ</a>
+                </div>
+              </aside>
             </div>
-        </div>
+          </div>
+        </form>
+
 
 
 
@@ -432,6 +463,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script src="./js/main.js"></script>
+  <script src="./js/cart.js"></script>
   <!-- <script src="./js/slider-main.js"></script> -->
 
 </body>
