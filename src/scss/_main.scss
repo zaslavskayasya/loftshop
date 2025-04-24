@@ -121,6 +121,26 @@ ul.slick-dots {
     right: -65px;
 }
 
+.seemore-slide-decor{
+    .sal-slider .slick-prev.slick-arrow  {
+        left: -30px;
+        top: 50%;
+    }
+    .sal-slider .slick-next {
+        right: -60px;
+    }
+    
+}
+@media screen and (max-width: 1700px) {
+    .seemore-slide-decor{
+        .sal-slider .slick-prev.slick-arrow  {
+            display: none!important;
+        }
+        .sal-slider .slick-next {
+            display: none!important;
+        }        
+    }
+}
 
 .col-slider .slick-prev.slick-arrow  {
     left: -65px;
