@@ -15,8 +15,7 @@ sortOptions.addEventListener('click', (e) => {
   if (e.target.tagName === 'LI') {
     selectedOption.textContent = e.target.textContent;
     sortDropdown.classList.remove('open');
-    sortToggle.classList.remove('open');
-    // Можеш тут додати виклик функції сортування:
+    sortToggle.classList.remove('open');    
     // sortBy(e.target.dataset.value);
   }
 });

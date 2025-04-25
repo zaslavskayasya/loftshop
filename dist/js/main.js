@@ -36,7 +36,6 @@ menuToggle2.addEventListener('click', () => {
 });
 
 
-
 // 🔹 Add active-line to the parent .calalog-menu-link of opened submenu
 function showActiveLine(link) {
   link.classList.add('active-line');

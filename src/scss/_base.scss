@@ -1,7 +1,6 @@
 html {
     overflow-x: hidden;
     &.left{
-        // overflow: hidden;
         overflow-x: hidden;
         overflow-y: hidden;
     }
@@ -10,12 +9,7 @@ body{
     background-color: #EFEFEF;;
     font-family: "Montserrat";
     &.left{
-        // overflow: hidden;
         overflow-x: hidden;
-        // .submenu-overlay{
-        //     pointer-events: none;
-        // }
-
     }
 }
 
@@ -56,22 +50,20 @@ h1, .h1{
 
 h2{
     color: #000;
-    /* Loft Card-name */
     font-family: "Montserrat";;
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
-    line-height: 144%; /* 23.04px */
+    line-height: 144%; 
 }
 
 h3{
     color: #000;
-    /* Loft Card-name */
     font-family: "Montserrat";;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 144%; /* 23.04px */
+    line-height: 144%;
 }
 
 .rating{
@@ -82,7 +74,6 @@ h3{
     flex-direction: row-reverse;
   }
   .rating__star{
-  /*     content: '+'; */
       display: inline-block;
       font-family: FontAwesome;
       font-size: 10px;

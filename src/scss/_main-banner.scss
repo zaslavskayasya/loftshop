@@ -1,5 +1,4 @@
-.main-banner{
-  // height: 500px;;
+.main-banner{ 
   position: relative;
   margin-bottom: 90px;
 }
@@ -8,7 +7,6 @@
     position: relative;
     background-size: cover;
     background-position: center;
-    // height: 100vh; /* або інша висота */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,7 +112,6 @@
       font-weight: 600;
       line-height: normal;
       text-transform: uppercase;
-      // transition: all ease 0.3s;
     }  
   }
 
@@ -138,13 +135,6 @@
   top:20px;
 }
 
-
-.inner-slider-wrapper {
-  // position: relative;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-}
 
 .inner-arrow {
   background: none;
@@ -212,8 +202,6 @@
   }
 
 }
-
-
 
 @media screen and (max-width: 650px){
   .outer-slide {

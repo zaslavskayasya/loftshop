@@ -1,8 +1,7 @@
 .flex-line, .limit, .pagination{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    // margin-bottom: 50px;;
+    align-items: center;    
 }
 
 .limit{
@@ -33,10 +32,6 @@
 }
 
 .pagination{
-    // margin-bottom: 30px;
-    .nav-item{
-
-    }
     .pagination-page{
         color: #141414;
         font-family: Montserrat;

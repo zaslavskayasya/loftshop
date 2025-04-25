@@ -1,8 +1,7 @@
 .wrap-item-page {
     display: flex;
-    gap: 20px; /* або скільки хочеш */
+    gap: 20px; 
     align-items: flex-start;
-    // height: 2000px;
     flex-direction: row;
     margin-bottom: 100px;
 }
@@ -10,14 +9,12 @@
 .wrap-item-image{
     width: 100%;
     max-height: auto;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;    
     img{
         width: 100%;
         object-fit: cover;
     }
 }
-
 
 .pics-part {
     // flex: 0 0 60%;
@@ -31,7 +28,6 @@
     overflow-y: auto;
     overflow-x: hidden;
     margin-right: 50px;
-
 }
 
 .inform-part {
@@ -41,35 +37,33 @@
     position: sticky;
     max-height: calc(100vh - 120px);
     overflow-y: auto;
-    // background-color: green;
-    position: relative; /* важливо, щоб sticky елемент мав нормальний контекст */
+    position: relative; 
 }
 
 .wrap-item-info {
-    will-change: transform;
-    // height: 100vh;
+    will-change: transform;  
     overflow-x: auto;
     transition: transform 0.2s ease-out;
-    top: 20px; /* можеш підлаштувати під дизайн */
+    top: 20px; 
 }
 
 .wrap-item-info {
     width: 100%;
-    overflow: auto; /* даємо можливість скролу */
-    scrollbar-width: thin; /* для Firefox — робимо скрол дуже тонким */
-    scrollbar-color: transparent transparent; /* робимо скрол невидимим в Firefox */
+    overflow: auto; 
+    scrollbar-width: thin; 
+    scrollbar-color: transparent transparent; 
   }
   .inform-part::-webkit-scrollbar,
   .pics-part::-webkit-scrollbar {
-    width: 8px; /* ширина скролу для браузерів на базі Webkit */
+    width: 8px; 
   }
   .inform-part::-webkit-scrollbar-thumb,
   .pics-part::-webkit-scrollbar-thumb {
-    background: transparent; /* робимо сам повзунок скролу невидимим */
+    background: transparent; 
   }
   .inform-part::-webkit-scrollbar-track ,
   .pics-part::-webkit-scrollbar-track {
-    background: transparent; /* фон для треку скролу */
+    background: transparent; 
   }
 
 
@@ -204,6 +198,8 @@
     border-bottom: 1px solid #D4D4D4 ;
 }
 
+
+
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
     background-color: #eee;
@@ -239,14 +235,7 @@
     height: 10px;
     transition: all ease 0.3s;
   }
-  
-  .active, .accordion:hover {
-    // background-color: #ccc;
-  }
-  
   .panel {
-    // padding: 0 18px;
-    // background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -255,8 +244,6 @@
         font-family: inherit;
     }
   }
-
-
   .panel-list{
     padding-left: 0px;
     li{
@@ -284,7 +271,6 @@
         }
     }
   }
-
 
   @media screen and (max-width: 1400px){
     .product-texts h1{
@@ -322,7 +308,6 @@
 
   @media screen and (max-width: 768px){
     .pics-part{
-        // max-width: 760px;
         max-height: auto;
         max-height: 100%;
         width: 100%;
@@ -331,7 +316,6 @@
         padding-bottom: 30px;
         .wrap-item-image{
             width: 100%;
-            // max-width: 760px;
         }
     }
     .inform-part{

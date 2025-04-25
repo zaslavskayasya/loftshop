@@ -1,4 +1,4 @@
-// Після DOMContentLoaded
+
 document.addEventListener("DOMContentLoaded", function () {
   const cart = document.querySelector(".cart");
   const summarySubtotal = document.querySelector(".cart-summary__row:not(.cart-summary__row--total) strong");
@@ -55,14 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
       updateTotal();
     });
 
-    // Додати обробник на ручне введення
-    input.addEventListener("input", () => {
-      // Відсікаємо все, крім цифр
+  
+    input.addEventListener("input", () => {      
       input.value = input.value.replace(/[^\d]/g, '');
       updateTotal();
     });
 
-    // Додатково – on blur перевірка на 0 або пусте
     input.addEventListener("blur", () => {
       if (!input.value || parseInt(input.value) < 1) {
         input.value = 1;
@@ -71,5 +69,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  updateTotal(); // Ініціалізація при завантаженні
+  updateTotal(); 
 });

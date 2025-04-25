@@ -19,8 +19,8 @@
 
 .footer-menu {
     display: grid;
-    grid-template-columns: repeat(2, auto); /* 2 колонки */
-    gap: 15px 40px; /* відступи між рядками і між колонками */
+    grid-template-columns: repeat(2, auto); 
+    gap: 15px 40px; 
     list-style: none;
     padding: 0;
     margin: 0;
@@ -29,7 +29,6 @@
     text-decoration: none;
     color: inherit;
     color: #000;
-    /* Loft FooterLink */
     font-family: Montserrat;
     font-size: 15px;
     font-style: normal;
@@ -45,7 +44,6 @@
     width: 45%;
     .copy{
         color: #797979;
-        /* Loft CopyText */
         font-family: Montserrat;
         font-size: 15px;
         font-style: normal;
@@ -91,7 +89,6 @@
 }
 
 @media screen and (max-width: 900px){
-
     .footer .lang-switch{
             flex-direction: row;
             .lang-item{
@@ -118,5 +115,4 @@
     .footer-menu_item{
         margin-bottom: 10px;;
     }
-
 }
