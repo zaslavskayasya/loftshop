@@ -1,57 +1,75 @@
+// Після DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function () {
-    const cart = document.querySelector(".cart");
-    const summarySubtotal = document.querySelector(".cart-summary__row:not(.cart-summary__row--total) strong");
-    const summaryTotal = document.querySelector(".cart-summary__row--total strong");
+  const cart = document.querySelector(".cart");
+  const summarySubtotal = document.querySelector(".cart-summary__row:not(.cart-summary__row--total) strong");
+  const summaryTotal = document.querySelector(".cart-summary__row--total strong");
 
-    function updateTotal() {
-      let total = 0;
+  function updateTotal() {
+    let total = 0;
 
-      cart.querySelectorAll(".cart__item").forEach(item => {
-        const quantityInput = item.querySelector(".quant_input");
-        const priceText = item.querySelector(".cart__price").textContent;
-        const totalCell = item.querySelector(".cart__total");
-
-        const quantity = parseInt(quantityInput.value);
-        const price = parseInt(priceText.replace(/[^\d]/g, ''));
-
-        const spanBold = document.createElement('p');
-        spanBold.className = 'price-small-bold';
-        spanBold.textContent = totalCell.dataset.text || ''; 
-
-        const itemTotal = price * quantity;
-        totalCell.textContent = itemTotal.toLocaleString("uk-UA") + " ₴";
-        totalCell.prepend(spanBold);
-
-        total += itemTotal;
-      });
-
-      const totalText = total.toLocaleString("uk-UA") + " ₴";
-      if (summarySubtotal) summarySubtotal.textContent = totalText;
-      if (summaryTotal) summaryTotal.textContent = totalText;
-    }
-
-    // Плюс/Мінус
     cart.querySelectorAll(".cart__item").forEach(item => {
-      const minusBtn = item.querySelector(".minus");
-      const plusBtn = item.querySelector(".plus");
-      const input = item.querySelector(".quant_input");
+      const quantityInput = item.querySelector(".quant_input");
+      const priceText = item.querySelector(".cart__price").textContent;
+      const totalCell = item.querySelector(".cart__total");
 
-      input.setAttribute("readonly", true); // Заборонити ручне редагування
+      let quantity = parseInt(quantityInput.value);
+      if (isNaN(quantity) || quantity < 1) {
+        quantity = 1;
+        quantityInput.value = 1;
+      }
 
-      minusBtn.addEventListener("click", () => {
-        let value = parseInt(input.value);
-        if (value > 1) {
-          input.value = value - 1;
-          updateTotal();
-        }
-      });
+      const price = parseInt(priceText.replace(/[^\d]/g, ''));
 
-      plusBtn.addEventListener("click", () => {
-        let value = parseInt(input.value);
-        input.value = value + 1;
-        updateTotal();
-      });
+      const spanBold = document.createElement('p');
+      spanBold.className = 'price-small-bold';
+      spanBold.textContent = totalCell.dataset.text || '';
+
+      const itemTotal = price * quantity;
+      totalCell.textContent = itemTotal.toLocaleString("uk-UA") + " ₴";
+      totalCell.prepend(spanBold);
+
+      total += itemTotal;
     });
 
-    updateTotal(); // Ініціалізація при завантаженні
+    const totalText = total.toLocaleString("uk-UA") + " ₴";
+    if (summarySubtotal) summarySubtotal.textContent = totalText;
+    if (summaryTotal) summaryTotal.textContent = totalText;
+  }
+
+  cart.querySelectorAll(".cart__item").forEach(item => {
+    const minusBtn = item.querySelector(".minus");
+    const plusBtn = item.querySelector(".plus");
+    const input = item.querySelector(".quant_input");
+
+    minusBtn.addEventListener("click", () => {
+      let value = parseInt(input.value);
+      if (value > 1) {
+        input.value = value - 1;
+        updateTotal();
+      }
+    });
+
+    plusBtn.addEventListener("click", () => {
+      let value = parseInt(input.value);
+      input.value = value + 1;
+      updateTotal();
+    });
+
+    // Додати обробник на ручне введення
+    input.addEventListener("input", () => {
+      // Відсікаємо все, крім цифр
+      input.value = input.value.replace(/[^\d]/g, '');
+      updateTotal();
+    });
+
+    // Додатково – on blur перевірка на 0 або пусте
+    input.addEventListener("blur", () => {
+      if (!input.value || parseInt(input.value) < 1) {
+        input.value = 1;
+        updateTotal();
+      }
+    });
   });
+
+  updateTotal(); // Ініціалізація при завантаженні
+});
