@@ -48,8 +48,7 @@ $(document).ready(function () {
           $inner.slick('unslick'); // Зупиняємо слайдер
         }
         return; // Якщо ширина екрану менше 768px, нічого не робимо далі
-      }
-  
+      }  
       // Ініціалізація слайдера тільки, якщо він ще не ініціалізований
       if (!$inner.hasClass('slick-initialized')) {
         $inner.slick({
@@ -59,6 +58,7 @@ $(document).ready(function () {
           vertical: true,
           slidesToShow: 3,
           slidesToScroll: 1,
+          margin: 20,
           swipe: true,
           verticalSwiping: true,
           draggable: true,
@@ -92,6 +92,7 @@ $(document).ready(function () {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll:2,
+        // centerMode: true,
         margin: 10,
         prevArrow: '<button class="slick-prev custom-arrow"> <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M42.75 27L11.25 27" stroke="#363535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 42.75L11.25 27L27 11.25" stroke="#363535" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> </button>',
         nextArrow: '<button class="slick-next custom-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none"><path d="M11.25 27L42.75 27" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 11.25L42.75 27L27 42.75" stroke="#4E4E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',

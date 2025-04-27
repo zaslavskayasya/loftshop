@@ -26,7 +26,7 @@
 }
 
 .name-block-line {
-    margin-bottom: 50px;
+    margin-bottom: 41px;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -83,6 +83,15 @@ ul.slick-dots {
     margin-bottom: 100px;
 }
 
+.sale-block{
+    .name-block-line {
+        margin-bottom: 50px;
+    }
+}
+
+.popular-banner{
+    margin-bottom: 54px;
+}
 
 
 /* Стрілки */
@@ -223,7 +232,7 @@ ul.slick-dots {
     height: 553px;
 
     .wrap-portfolio-image {
-        min-width: 650px;
+        min-width: 819px;
         height: 100%;
 
         img {
@@ -236,7 +245,7 @@ ul.slick-dots {
     .portfolio-info {
         background: #535F52;
         color: #fff;
-        padding: 80px 85px;
+        padding: 49px 43px 33px 85px;
     }
 
     .portfoplio-name {
@@ -282,6 +291,7 @@ ul.slick-dots {
         box-sizing: border-box;
         position: relative;
         z-index: 90;
+        margin-top: 110px;
 
         &:hover {
             background-color: #fff;
@@ -318,7 +328,7 @@ ul.slick-dots {
 }
 
 .sm-1 {
-    width: 40%;
+    width: 37.5%;
     height: 317px;
 }
 
@@ -331,7 +341,7 @@ ul.slick-dots {
 
 .sm-1-text {
     position: absolute;
-    top: 50%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -347,6 +357,7 @@ ul.slick-dots {
     line-height: normal;
     text-transform: uppercase;
     margin: 0px;
+    margin-bottom: 20px;
 }
 
 .sm-big-number {
@@ -361,14 +372,14 @@ ul.slick-dots {
 }
 
 .sm-2 {
-    width: 30%;
+    width: 31%;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .sm-3 {
-    width: 26%;
+    width: 27%;
 }
 
 .sm-item,
@@ -530,7 +541,7 @@ ul.slick-dots {
     }
     .col-texts{
         position: absolute;
-        top:30%;
+        top:35%;
         left: 0px;
         right: 0px;
         margin: 0 auto;
