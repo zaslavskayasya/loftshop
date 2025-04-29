@@ -3,7 +3,7 @@
 }
 
 .footer-inner{
-    padding: 52px 59px;
+    padding: 39px 69px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -18,12 +18,14 @@
 
 
 .footer-menu {
-    display: grid;
-    grid-template-columns: repeat(2, auto); 
-    gap: 15px 40px; 
+    display: grid    ;
+    grid-template-columns: repeat(2, auto);
+    gap: 13px 58px;
     list-style: none;
     padding: 0;
     margin: 0;
+    padding-left: 83px;
+    padding-top: 13px;
   }
   .footer-menu-link {
     text-decoration: none;
@@ -35,13 +37,15 @@
     font-weight: 500;
     line-height: normal;
     transition: color 0.3s ease;
+    // padding-top: 13px;
     &.active, &:hover{
         color: #FF0524;
     }
   }
 
 .footer-information{
-    width: 45%;
+    width: 49%;
+    padding-top: 15px;
     .copy{
         color: #797979;
         font-family: Montserrat;
