@@ -17,6 +17,16 @@ a{
     transition: all ease 0.3s;
 }
 
+
+p{
+    color: #000;
+    font-family: "Montserrat";;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
 .small_bold{
     color: #000;
     font-family: "Montserrat";;
@@ -45,7 +55,7 @@ h1, .h1{
     line-height: normal;
     text-transform: uppercase;
     color: #000;
-    margin-bottom: 50px;
+    margin-bottom: 43px;
 }
 
 h2{
@@ -65,6 +75,16 @@ h3{
     font-weight: 500;
     line-height: 144%;
 }
+
+h4{
+    color: #000;
+    font-family: "Montserrat";;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%;
+}
+
 
 .rating{
     width: auto;
