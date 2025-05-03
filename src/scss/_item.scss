@@ -295,9 +295,7 @@
         flex-direction: column;
     }
   }
-  .pics-part .wrap-item-image {
-    // padding: 10px;
-  }
+
   .pics-part .item-image {
     width: 100%;
     height: auto;
@@ -306,6 +304,9 @@
 
 
   @media screen and (max-width: 768px){
+    .pics-part .wrap-item-image {
+        padding: 10px;
+      }
     .pics-part{
         max-height: auto;
         max-height: 100%;
