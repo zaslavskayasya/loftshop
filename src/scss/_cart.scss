@@ -536,64 +536,65 @@ input.invalid {
   &::placeholder {
     font-size: 12px;
   }
-  .dropdown {
-    position: relative;
-    width: 100%;
-    font-family: sans-serif;
-    margin-bottom: 1rem;
-  }
-  .dropdown input {
-    width: 100%;
-    padding: 15px 30px 14px 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    font-size: 13px;
-  }
-  .dropdown .arrow {
-    position: absolute;
-    right: 10px;
-    background-image: url(../images/icons/m-ar.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 10px;
-    width: 16px;
-    top: 20px;
-    transform: translateY(-50%) rotate(0deg);
-    transition: transform 0.2s ease;
-    pointer-events: none;
-  }
-  .dropdown.open .arrow {
-    transform: translateY(-50%) rotate(180deg);
-  }
-  .dropdown .options {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    border: 1px solid #ccc;
-    border-top: none;
-    max-height: 200px;
-    overflow-y: auto;
-    display: none;
-  }
-  .dropdown.open .options {
-    z-index: 99900;
-    display: block;
-    position: relative;
-    height: 200px;
-    max-height: 200px;
-    overflow-y: scroll;
-  }
-  .dropdown .option {
-    padding: 10px;
-    cursor: pointer;
-  }
+}
+.dropdown {
+  position: relative;
+  width: 100%;
+  font-family: sans-serif;
+  margin-bottom: 1rem;
+}
+.dropdown .dropdown-input {
+  width: 100%;
+  padding: 15px 30px 14px 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 13px;
+  background-color: transparent;
+}
+.dropdown .arrow {
+  position: absolute;
+  right: 10px;
+  background-image: url(../images/icons/m-ar.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 10px;
+  width: 16px;
+  top: 20px;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+.dropdown.open .arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+.dropdown .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+}
+.dropdown.open .options {
+  z-index: 99900;
+  display: block;
+  position: relative;
+  height: 200px;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+.dropdown .option {
+  padding: 10px;
+  cursor: pointer;
+}
 
-  .dropdown .option:hover {
-    background-color: #f0f0f0;
-  }
+.dropdown .option:hover {
+  background-color: #f0f0f0;
 }
 
 /* 5.3 checkbox  */
