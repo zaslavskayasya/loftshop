@@ -94,31 +94,68 @@
     line-height: 144%; /* 23.04px */
     transition: all ease 0.3s;
 }
+.card-bottom {
 
-.price-place{
-    p{
-        display: inline-block;
-        margin: 00px;
-        
-    }
-    .price-new{
-        color: #E31727;
-        font-family: inherit;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-    }
-    .old-price{
-        color: #7B7B7B;
-        font-family: inherit;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        text-decoration-line: line-through;
+    .price-place{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        p{
+            display: inline-block;
+            margin: 00px;
+            
+        }
+        .price-new{
+            color: #E31727;
+            font-family: inherit;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        .old-price{
+            color: #7B7B7B;
+            font-family: inherit;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration-line: line-through;
+        }    
+    
+        .screen-reader-text{
+            height: 0px;
+            opacity: 0;
+            width: 0;
+        }
+          
+        del{
+            text-decoration: none;
+            .woocommerce-Price-amount, .woocommerce-Price-currencySymbol{
+            color: #7B7B7B;
+            font-family: inherit;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-decoration-line: line-through;
+            margin-left: 5px;
+            }
+        }        
+        ins{
+            text-decoration: none;
+            .woocommerce-Price-amount, .woocommerce-Price-currencySymbol {
+                color: #E31727;
+                font-family: inherit;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
     }
 }
+
 
 .tekeit-button{
     border: none; 
@@ -170,6 +207,9 @@
     .cards-block {
         grid-template-columns: repeat(2, 1fr);
     }
+    .card-bottom .price-place del .woocommerce-Price-amount, .card-bottom .price-place del .woocommerce-Price-currencySymbol{
+        margin-left: 0px;
+    }
     .card .card-image-wrap {
         width: auto;
         height: 166px;
@@ -177,6 +217,9 @@
     }
     .cards-block{
         margin-bottom: 20px;
+    }
+    .card-bottom .price-place{
+        flex-direction: column;
     }
 
 }
