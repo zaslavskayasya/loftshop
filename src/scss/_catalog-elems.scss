@@ -32,6 +32,8 @@
 }
 
 .pagination{
+    display: flex;
+
     .pagination-page{
         color: #141414;
         font-family: Montserrat;
@@ -51,11 +53,47 @@
         margin: 0px 35px;
     }
 }
+
+.page-numbers{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    li {
+        .page-numbers{
+           color: #141414;
+            font-family: Montserrat;
+            font-size:20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 10px;
+            margin: 0px 11px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            &.active, &:hover, &.current{
+                color: #FF0524;
+            }  
+        }
+        .prev, .next{
+            width: 65px;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
 .flex-line{
     margin-bottom: 70px;;
 }
 
 @media screen and (max-width: 980px){
+    .page-numbers li .page-numbers{
+        font-size: 14px;
+    }
+    .page-numbers li .prev, .page-numbers li .next {
+        width: 40px;
+    }
   .pagination .pagination-page {
     font-size: 15px;
 }

@@ -1,3 +1,94 @@
+
+
+.block-404{
+    padding: 100px 0px 200px;
+}
+.wrap-forty{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+
+}
+.forty{
+    font-size: 228px;
+    font-family: Montserrat;
+    color: #545353;
+    font-weight: 700;
+    &:nth-child(1){
+        margin-right: -30px;
+    }
+    
+}
+.crown-image{
+    width: 245px;
+    height: 245px;
+    object-fit: cover;
+}
+.dont-exist{
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500; 
+    margin-bottom: 20px;
+}
+.alternatives{
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 70%;
+    margin: 0 auto;
+    line-height: 150%;
+    a{
+        color: #E31727;
+        transition: all ease 0.3s;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+
+.LoginForm{
+}
+.formStyle{
+    max-width: 300px;
+    margin: 20px auto 40px;
+    .input-group{
+        margin-bottom: 25px;
+    }
+    .btn-togo {
+        margin: 0 auto;
+        display: block;
+        text-transform: none;
+        background-color: #000;
+        color: #fff;
+        padding: 19px 55px;      
+        transition: all ease 0.3s;
+        &:hover{
+            background-color: #fff;
+            color: #000;
+        }  
+    }
+    
+}
+
+.links-line{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    .link-type{
+        color: #000;
+        font-family: inherit;
+        font-size: 16px;
+        text-decoration: none;
+        &:hover{
+            color: #E31727;
+        }
+    }
+}
+
 .block-name {
     color: #000;
     font-family: inherit;
@@ -835,6 +926,19 @@ ul.slick-dots {
 }
 
 @media screen and (max-width: 768px){
+    .forty{
+        font-size: 80px;
+    }
+    .crown-image{
+        width: 140px;
+        height: 140px;
+    }
+    .dont-exist{
+        font-size: 25px;
+    }
+    .alternatives{
+        font-size: 19px;
+    }
     .sal-slider{
         .card{
             flex-direction: column;
