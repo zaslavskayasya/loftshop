@@ -4,7 +4,7 @@ const exitBtn = document.querySelector('.exit-btn');
 const overlays = document.querySelector('.modalOverlay');
 
 
-function openModal() {
+function openModal() { 
     overlays.classList.add('active');
     document.body.classList.add('modal-open');
 }
